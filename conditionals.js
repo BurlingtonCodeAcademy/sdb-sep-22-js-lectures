@@ -161,6 +161,21 @@ If neither of these satisfy, state so.
 
 */
 
+let age = 28
+let health = "healthy"
+
+if ( age <= 17 && health == "sick") {
+    console.log("can't do anything")
+} else if (age <= 17) {
+    console.log("too young")
+} else if (age >= 18 && age < 21 && health == "sick") {
+    console.log("see an md before voting")
+} else if (age < 21) {
+    console.log("you can vote!")
+} else if (age < 25 && health == "sick") {
+    console.log("you're too sick to drink")
+} 
+
 // TODO Need a solution around 4PM ET
 
 // ? Ternaries
@@ -208,17 +223,27 @@ console.log(result)
 let lampOn = false;
 let daytime = true;
 
-if (lampOn == true && daytime != true) {
-  console.log("The lamp is on during the night");
-} else if (lampOn != true && daytime != true) {
-  console.log("The lamp is off during the night");
-} else if (lampOn == true && daytime == true) {
-  console.log("The lamp is on during the day");
-} else if (lampOn != true && daytime == true) {
-  console.log("The lamp is off during the day");
-} else {
-  console.log("What lamp?");
-}
+// if (lampOn == true && daytime != true) {
+//   console.log("The lamp is on during the night");
+// } else if (lampOn != true && daytime != true) {
+//   console.log("The lamp is off during the night");
+// } else if (lampOn == true && daytime == true) {
+//   console.log("The lamp is on during the day");
+// } else if (lampOn != true && daytime == true) {
+//   console.log("The lamp is off during the day");
+// } else {
+//   console.log("What lamp?");
+// }
+
+lampOn && !daytime
+    ? console.log("Lamp on during the night")
+    : !lampOn && !daytime
+    ? console.log("The lamp is off during the night") 
+    : lampOn && daytime
+    ? console.log("The lamp is on during the day")
+    : !lampOn && daytime
+    ? console.log("The lamp is off during the day")
+    : null
 
 // ? Switch Statements
 
@@ -254,4 +279,47 @@ Create a 'grade' variable that holds a string value of 'A,B,C,D or F.
 Create a switch statement that passes that variable to check.  Depending on the grade, console log a string result that indicates what they need (ex: A = 'Passed!', F = 'Failing', etc.).
 */
 
+let grade = 89
 
+switch(true) {
+    case grade > 89:
+        console.log("You got an A")
+        break;
+    case grade > 79:
+        console.log("You got a B")
+        break;
+    case grade > 66:
+        console.log("Passing with C")
+        break;
+    case grade > 59:
+        console.log("passing with D")
+        break;
+    case grade < 59:
+        console.log("Failing")
+        break;
+    default:
+        console.log("Input is not a grade")
+}
+
+// Replit Hello Frenemy
+
+function respond(name) {
+    name = name.toLowerCase()
+    let fName = name.split(" ")[0]
+    let lName = name.split(" ")[1]
+    let fName2 = fName[0].toUpperCase() + fName.slice(1)
+    let lName2 = lName[0].toUpperCase() + lName.slice(1)
+
+    if (name == "luke skywalker") {
+        console.log(`Hello ${fName2}, ${lName2} my friend`)
+    } else {
+      console.log(`Be gone you villain! ${name}`)
+    }
+  }
+  
+  respond('DARTH vader');
+  // should print 'Noooooo! That's impossible!'
+  respond('lex luthor');
+  // should print 'Be gone, you villian!!!'
+  respond('luke skywalker');
+  // should print 'Hello luke skywalker, you are a wonderful friend!'
