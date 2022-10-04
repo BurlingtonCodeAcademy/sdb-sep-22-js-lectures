@@ -137,3 +137,8 @@ console.log(5 == "5") // returns true left value and right value are the same th
 console.log(5 === "5") // returns false. Values identical but data types different (int !== str)
 
 // Expressions - unprocessed values within (). Covered in conditionals
+
+// Modulo or Modulus "%"
+// Cheks for the remainder of long division
+
+console.log(12 % 5)  // returns 2
