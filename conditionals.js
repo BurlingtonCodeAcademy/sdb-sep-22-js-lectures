@@ -148,3 +148,110 @@ console.log(typeof lightSwitch, lightSwitch, Boolean(lightSwitch))
 if (lightSwitch != true) {
     console.log("Light switch has falsey value")
 }
+
+/* 
+Challenge:
+
+Create a conditional that will check users age and health status
+If they're 17 or younger, they're too young to do anything. But if they're sick, they should see a doctor.
+If they're over 18, they can vote. But if they're sick, they should see a doctor before voting
+If they're over 21 they can drink. If they're sick, they will not be able to drink
+If they're over 25, they can rent a car. If they're sick they should have someone else drive.
+If neither of these satisfy, state so.
+
+*/
+
+// TODO Need a solution around 4PM ET
+
+// ? Ternaries
+
+/* 
+    A quick way of creating an if/else conditional.
+*/
+
+lightSwitch = "on"
+
+// if (lightSwitch == "on") {
+//     console.log("The light is on")
+// } else if (lightSwitch == "off") {
+//     console.log("the Light is off")
+// }
+
+/* 
+    Ternary Syntax:
+
+    conditional ? code block if true : code block if false
+
+*/
+
+lightSwitch == "on" ? console.log("The light is on") : console.log("The light is off")
+
+
+// Chaining Ternaries
+
+season == 1 ? console.log("Spring")
+    : season == 2 ? console.log("Summer")
+    : season == 3 ? console.log("Fall")
+    : season == 4 ? console.log("Winter")
+    : console.log("Input is from 1 - 4")
+
+// Assigning the return of this conditional to the variable "result"
+let result = lightSwitch ? "This if true" : "This if false"
+//           (condition) ? code if true   :  code if false
+
+console.log(result)
+
+// ? TERNARY CHALLENGE
+
+// Take this if/else statement and make it into a ternary.
+
+let lampOn = false;
+let daytime = true;
+
+if (lampOn == true && daytime != true) {
+  console.log("The lamp is on during the night");
+} else if (lampOn != true && daytime != true) {
+  console.log("The lamp is off during the night");
+} else if (lampOn == true && daytime == true) {
+  console.log("The lamp is on during the day");
+} else if (lampOn != true && daytime == true) {
+  console.log("The lamp is off during the day");
+} else {
+  console.log("What lamp?");
+}
+
+// ? Switch Statements
+
+/* 
+    Switches execute a block of code dependendent upon a different case.
+
+    We ask a question that requires a specific response determined by our answer.
+*/
+
+let uprightInstructor = "Benny"
+
+// Information that may change depending
+switch(uprightInstructor) {
+    // condition on which code after : will execute
+    case "Paul":
+        console.log(`${uprightInstructor} is a Lead SD Instructor`)
+        // break is used to stop other cases from evaluating
+        break
+    case "Rob":
+        console.log(`${uprightInstructor} is a Lead SD Instructor`)
+        break
+    case "Matt":
+        console.log(`${uprightInstructor} left me for CS and I'm still salty`)
+        break
+    default:
+        console.log(`${uprightInstructor} may or may not be working for Upright`)
+}
+
+// ? SWITCH CHALLENGE
+
+/*
+Create a 'grade' variable that holds a string value of 'A,B,C,D or F.
+Create a switch statement that passes that variable to check.  Depending on the grade, console log a string result that indicates what they need (ex: A = 'Passed!', F = 'Failing', etc.).
+*/
+
+
