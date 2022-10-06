@@ -103,3 +103,27 @@ console.log(concatenateString(122, "Niemczyk"));
     console.log("IIFE")
 })()
 
+// Capitalize Lab Review
+
+function capitalize(string) {
+    // let firstLetter = string[0].toUpperCase()
+    let firstLetter = string.slice(0,1).toUpperCase()
+    let restOfWord = string.slice(1).toLowerCase()
+    // let fullWord = firstLetter + restOfWord
+    // return fullWord
+    return firstLetter + restOfWord
+}
+
+console.log(capitalize("LKJDFLDKSJFSLKJ"))
+
+// Divisible Lab Review
+
+let divisible = (dividend, divisor) => {
+    // let remainder = dividend % divisor
+
+    // return remainder == 0 ? true : false
+    // return dividend % divisor == 0 ? true : false
+    return !(dividend % divisor) ? true : false
+}
+
+console.log(divisible(15, 5))
