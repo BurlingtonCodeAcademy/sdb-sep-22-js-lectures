@@ -185,7 +185,7 @@ function potatoPoemWhile() {
             : console.log(`${count} potato!`)
         }
     }
-    
+
 function potatoPoemFor() {
 
     for (let count = 0; count < 100; count++) {
@@ -197,3 +197,8 @@ function potatoPoemFor() {
 }
 
 potatoPoemFor()
+
+let temp = 68
+
+let result = temp > 70 ? "summer" : "spring"
+console.log(result)
