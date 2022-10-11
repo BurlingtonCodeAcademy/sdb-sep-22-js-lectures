@@ -165,6 +165,75 @@ function fib(length) {
 
 }
 
-fib(10)
+fib(100)
+
+// Advanced Array Methods
+
+// Arrays are iterable
+
+for (i of series) {
+    console.log(i)
+}
+
+let bulldogTypes = ["English Bulldog", "Victorian Bulldog", "Old English Bulldog", "Bullmastiff", "French Bulldog"]
+
+/* 
+    .forEach()
+
+    Fires a callback function on each element in the array
+*/
+
+bulldogTypes.forEach((arrayElement, elementIndex) => console.log(arrayElement, elementIndex))
+
+// ! ^^ same as below ...
+
+// function callbackFx(arrayElement, elementIndex) {
+//     console.log(arrayElement, elementIndex)
+// }
+
+// bulldogTypes.forEach(callbackFx)
+
+/* 
+    .map()
+
+    Creates an array with elements resulting from the callback function.
+*/
 
 
+let bulldogUpperCase = bulldogTypes.map(i => i.toUpperCase())
+
+
+// ! ^^ same as below with forEach ...
+
+// let bulldogUpperCase = []
+// bulldogTypes.forEach((i) => {
+//     bulldogUpperCase.push(i.toUpperCase())
+// })
+
+console.log(bulldogUpperCase)
+
+/* 
+    .filter()
+
+    Creates a new array based on the filter function
+*/
+
+let marvelCharacters = ["Captain America", "Black Widow", "Doctor Strange", "Ant Man", "Spider Man", "Angelina Jolie"]
+
+let startsA = marvelCharacters.filter(i => i.startsWith("A"))
+
+console.log(startsA)
+
+// Mini Challenge
+
+let grades = [56, 78, 96, 41, 7, 22, 15, 10, 89]
+
+// Explore a way to utilize one of the array methods to raise the grade by 15 points for everyone
+// Those above 90 should not get any points.
+// Hint reassignment needs to happen on an original array
+
+grades.forEach((item, index, myArr) => myArr[index] > 90 ? null : myArr[index] = item + 15)
+console.log(grades)
+
+let newGrades = grades.map(i => i <= 90 ? i + 15 : i)
+console.log(newGrades)
