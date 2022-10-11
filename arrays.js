@@ -130,3 +130,41 @@ console.log(educationTeam)
 
 console.log("New Array Length", educationTeam.unshift(["Paul Niemczyk", "Rob VanArsdall"]))
 console.log(educationTeam)
+
+// Fibonacci Stack Walkthru
+
+// start no; stop no; (current number + prior no) repeated
+// 0, 1, 1, 2, 3, 5, 8....
+
+let series = [0, 1]
+
+
+function start(x, y) {
+    series[0] = x
+    series[1] = y
+}
+
+start(3, 5)
+
+function fib(length) {
+
+    if (typeof length !== "number") {
+        console.log("Please enter a number")
+    } else {
+        while (series.length < length) {
+            let secondValue = series.pop()
+            let firstValue = series.pop()
+            let sum = firstValue + secondValue
+            series.push(firstValue, secondValue, sum)
+            
+            // Oneline solution with no variables
+            // series.push(series[series.length - 2] + series[series.length - 1])
+        }
+        console.log(series)
+    }
+
+}
+
+fib(10)
+
+
