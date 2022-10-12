@@ -237,3 +237,7 @@ console.log(grades)
 
 let newGrades = grades.map(i => i <= 90 ? i + 15 : i)
 console.log(newGrades)
+
+let arrr = ["red", "white", 2, "purple"]
+
+console.log(arrr.pop(), arrr)
