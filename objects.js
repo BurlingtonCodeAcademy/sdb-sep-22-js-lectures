@@ -268,4 +268,10 @@ const presidents = [
 
 // Utilize a filter method to create a new array with presidents who were born after the 1900's
 
+let modernPresidents = presidents.filter(president => president.year >= 1900)
+// console.log(modernPresidents)
+
 // Utilizing your new filtered array, use forEach to print a string interpolated names of hte presidents.
+
+modernPresidents.forEach(i => console.log(`${i.first} ${i.last}`))
+
