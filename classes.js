@@ -77,3 +77,14 @@ console.log(maserati)
 // We use Car.greetDriver() method on our instance of a Car class object
 console.log(maserati.greetDriver("Justin"))
 
+/* 
+    Create a class object called Avnegers. It will have properties of name, superpower, age, isDead, keyMovie
+
+    Create an instance of that object with the superhero name and its properties
+
+    ? Create a method that console logs the name and keyMovie together
+
+    ! SPICEY MODE
+
+    Create a method that takes the name of the superhero and checks it against two arrays: one with teamCap and one with teamStark and returns which team the superhero is on as part of Civil War
+*/
