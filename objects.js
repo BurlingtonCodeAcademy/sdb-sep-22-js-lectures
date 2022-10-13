@@ -275,3 +275,8 @@ let modernPresidents = presidents.filter(president => president.year >= 1900)
 
 modernPresidents.forEach(i => console.log(`${i.first} ${i.last}`))
 
+let object = new Object()
+
+console.log(object)
+object.name = "Paul"
+console.log(object)
